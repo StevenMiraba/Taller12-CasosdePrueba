@@ -57,8 +57,8 @@ public class Calculadoraa {
     }
 
     public int sumaDivisores(int x) {
-    if (x <= 0) {
-        throw new IllegalArgumentException("El número debe ser mayor que cero");
+    if (x <= 1) {
+        throw new IllegalArgumentException("El número debe ser mayor que uno");
     }
     int suma = 0;
     for (int i = 1; i < x; i++) {  // Excluye el propio número

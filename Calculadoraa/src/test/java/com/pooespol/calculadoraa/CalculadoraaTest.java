@@ -453,20 +453,20 @@ public class CalculadoraaTest {
 
     @Test
     public void testSumaDivisores_TCSD03() {
-        double x = 12.0;
+        int x = 1;
         Calculadoraa instance = new Calculadoraa();
-        int expResult = 16;  // 1 + 2 + 3 + 4 + 6 = 16
-        int result = instance.sumaDivisores((int)x);
-        assertEquals(expResult, result);
+        assertThrows(IllegalArgumentException.class, () -> {
+            instance.sumaDivisores(x);
+        });
     }
-
+    
     @Test
     public void testSumaDivisores_TCSD04() {
-        double x = 1.0;
+        int x = 0;
         Calculadoraa instance = new Calculadoraa();
-        int expResult = 1;  // El único divisor de 1 es 1
-        int result = instance.sumaDivisores((int)x);
-        assertEquals(expResult, result);
+        assertThrows(IllegalArgumentException.class, () -> {
+            instance.sumaDivisores(x);
+        });
     }
 
 
